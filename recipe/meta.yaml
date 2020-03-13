@@ -1,5 +1,5 @@
 {% set name = "laspy" %}
-{% set version = "1.6.0" %}
+{% set version = "1.7.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,12 +7,12 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: eb0a4abe2f3cf49e81cc6c87f31980b5e243f8d2911bb663eba856242526bd13
+  sha256: f2a354fe08a399949fce1a91019f70136ec396b1f88462e54f23b7a12ef2addf
 
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - lascopy = laspy.tools.lascopy:main
     - lasexplorer = laspy.tools.lasexplorer:main
@@ -47,7 +47,7 @@ about:
   license: BSD-2-Clause
   license_family: BSD
   license_file: LICENSE.txt
-  summary: 'Native Python ASPRS LAS read/write library'
+  summary: Native Python ASPRS LAS read/write library
 
   description: |
     Laspy is a python library for reading, modifying and creating LAS LiDAR files.
