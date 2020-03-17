@@ -12,7 +12,7 @@ source:
 build:
   noarch: python
   number: 0
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: "{{ PYTHON }} -m pip install . --no-deps -vv"
   entry_points:
     - lascopy = laspy.tools.lascopy:main
     - lasexplorer = laspy.tools.lasexplorer:main
@@ -29,6 +29,8 @@ requirements:
   run:
     - python >=3
     - numpy
+    - laszip
+    - lastools
 
 test:
   imports:
