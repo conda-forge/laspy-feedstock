@@ -12,37 +12,26 @@ source:
 build:
   noarch: python
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
-  entry_points:
-    - lascopy = laspy.tools.lascopy:main
-    - lasexplorer = laspy.tools.lasexplorer:main
-    - lasnoise = laspy.tools.lasnoise:main
-    - lasverify = laspy.tools.lasverify:main
-    - lasvalidate = laspy.tools.lasvalidate:main
-    - lasviewer = laspy.tools.lasviewer:main
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3
+    - python >=3.6
     - pip
     - numpy
   run:
-    - python >=3
+    - python >=3.6
     - numpy
-    - laszip
-    - lastools
 
 test:
   imports:
     - laspy
+  requirements:
+    - pytest
+  source_files:
+    - tests/*
   commands:
-    - python -m unittest -v laspytest.test_laspy
-    - lascopy -h
-    - lasexplorer -h
-    - lasnoise -h
-    - lasverify -h
-    - lasvalidate -h
-    - lasviewer -h
+    - pytest -v
 
 about:
   home: https://github.com/laspy/laspy
