@@ -42,7 +42,7 @@ about:
 
   description: |
     Laspy is a python library for reading, modifying and creating LAS LiDAR files.
-  doc_url: https://pythonhosted.org/laspy/
+  doc_url: https://laspy.readthedocs.io/en/latest/
   dev_url: https://github.com/laspy/laspy
 
 extra:
