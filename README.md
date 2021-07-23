@@ -11,7 +11,7 @@ Summary: Native Python ASPRS LAS read/write library
 
 Development: https://github.com/laspy/laspy
 
-Documentation: https://pythonhosted.org/laspy/
+Documentation: https://laspy.readthedocs.io/en/latest/
 
 Laspy is a python library for reading, modifying and creating LAS LiDAR files.
 
