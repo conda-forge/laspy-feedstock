@@ -11,17 +11,20 @@ source:
 
 build:
   noarch: python
-  number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  number: 1
+  skip: true  # [py<39]
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.6
+    - python
     - pip
     - numpy
+    - lazrs-python
   run:
-    - python >=3.6
+    - python
     - numpy
+    - lazrs-python
 
 test:
   imports:
