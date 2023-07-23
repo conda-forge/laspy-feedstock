@@ -1,5 +1,5 @@
 {% set name = "laspy" %}
-{% set version = "2.4.1" %}
+{% set version = "2.5.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 13caecc7325cb2242cb25394984d21b3b5f796c88bcb44bc2ed2d3cf1b972ac4
+  sha256: b5b12ea8590556b78a9bdd46e3f8083ac72399a84689a5a976e8b77cc7677bb8
 
 build:
   number: 0
