@@ -18,15 +18,15 @@ requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - numpy                                  # [build_platform != target_platform]
+    - numpy 1.23.*                           # [build_platform != target_platform]
   host:
     - python
     - pip
-    - numpy
+    - numpy 1.23.*
     - lazrs-python
   run:
     - python
-    - numpy
+    - numpy 1.23.*
     - lazrs-python
 
 test:
