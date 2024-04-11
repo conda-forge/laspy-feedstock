@@ -11,22 +11,22 @@ source:
 
 build:
   number: 1
-  skip: true  # [py<39]
+  skip: true  # [py<39] or [python_impl == 'pypy']
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - python                                 # [build_platform != target_platform]
     - cross-python_{{ target_platform }}     # [build_platform != target_platform]
-    - numpy 1.23.*                           # [build_platform != target_platform]
+    - numpy                            # [build_platform != target_platform]
   host:
     - python
     - pip
-    - numpy 1.23.*
+    - numpy
     - lazrs-python
   run:
     - python
-    - numpy 1.23.*
+    - numpy
     - lazrs-python
 
 test:
