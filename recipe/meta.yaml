@@ -26,6 +26,7 @@ requirements:
     - pip
     - numpy
     - lazrs-python
+    - setuptools
   run:
     - python
     - numpy
