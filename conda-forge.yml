@@ -17,4 +17,3 @@ provider:
   osx: azure
   win: azure
 test: native_and_emulated
-
