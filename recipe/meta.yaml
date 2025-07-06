@@ -11,7 +11,6 @@ source:
 
 build:
   number: 0
-  skip: true  # [py<39]
   skip: true  # [python_impl == 'pypy']
 
   script: {{ PYTHON }} -m pip install . -vv
@@ -32,6 +31,7 @@ requirements:
     - python
     - numpy
     - lazrs-python
+    - m2r2
 
 test:
   imports:
