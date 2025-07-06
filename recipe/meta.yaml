@@ -1,16 +1,16 @@
 {% set name = "laspy" %}
-{% set version = "2.5.4" %}
+{% set version = "2.6.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: eebdbf3379afbc0b24e7e4812fac567bff880d1e851f70175d22375aaecdf7e1
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 9f1b9f2598a7e7f55aef94d030c6fab99c68bed751ca66fe11f017e43c260294
 
 build:
-  number: 1
+  number: 0
   skip: true  # [py<39]
   skip: true  # [python_impl == 'pypy']
 
