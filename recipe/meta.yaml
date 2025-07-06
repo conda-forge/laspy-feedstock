@@ -27,6 +27,7 @@ requirements:
     - numpy
     - lazrs-python
     - setuptools
+    - m2r2
   run:
     - python
     - numpy
