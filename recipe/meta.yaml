@@ -27,6 +27,7 @@ requirements:
     - lazrs-python
     - setuptools
     - m2r2
+    - hatch
   run:
     - python
     - numpy
