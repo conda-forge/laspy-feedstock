@@ -13,18 +13,19 @@ source:
   sha256: f56feb5445e75d6ff12ee814aab6a35339290e75264ff277c6bf553f3025a3f5
 
 build:
-  number: 1
-  skip: python_impl == 'pypy'
+  number: 2
+  skip:
+    - python_impl == 'pypy'
+    - target_platform == 'linux-ppc64le' and match(python, '>=3.15')
   script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
   build:
     - if: build_platform != target_platform
-      then: python
-    - if: build_platform != target_platform
-      then: cross-python_${{ target_platform }}
-    - if: build_platform != target_platform
-      then: numpy
+      then:
+        - python
+        - cross-python_${{ target_platform }}
+        - numpy
   host:
     - python
     - pip
