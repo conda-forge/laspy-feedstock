@@ -127,15 +127,6 @@ description = "Debug laspy-feedstock with variant linux_aarch64_channel_sourcesc
 [feature.build.tasks."inspect-linux_aarch64_channel_sourcesconda-forgepython3.14.____cp314"]
 cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_aarch64_channel_sourcesconda-forgepython3.14.____cp314.yaml"
 description = "List contents of laspy-feedstock packages built for variant linux_aarch64_channel_sourcesconda-forgepython3.14.____cp314"
-[feature.build.tasks."build-linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rcpython3.15.____cp315"]
-cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rcpython3.15.____cp315.yaml --target-platform linux-ppc64le"
-description = "Build laspy-feedstock with variant linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rcpython3.15.____cp315 directly (without setup scripts)"
-[feature.build.tasks."debug-linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rcpython3.15.____cp315"]
-cmd = "rattler-build debug setup --recipe recipe -m .ci_support/linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rcpython3.15.____cp315.yaml --target-platform linux-ppc64le"
-description = "Debug laspy-feedstock with variant linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rcpython3.15.____cp315 directly (without setup scripts)"
-[feature.build.tasks."inspect-linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rcpython3.15.____cp315"]
-cmd = "inspect_artifacts --recipe-dir recipe -m .ci_support/linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rcpython3.15.____cp315.yaml"
-description = "List contents of laspy-feedstock packages built for variant linux_ppc64le_channel_sourcesconda-forgeconda-forgelabelpython_rcpython3.15.____cp315"
 [feature.build.tasks."build-linux_ppc64le_channel_sourcesconda-forgepython3.11.____cpython"]
 cmd = "rattler-build build --recipe recipe -m .ci_support/linux_ppc64le_channel_sourcesconda-forgepython3.11.____cpython.yaml --target-platform linux-ppc64le"
 description = "Build laspy-feedstock with variant linux_ppc64le_channel_sourcesconda-forgepython3.11.____cpython directly (without setup scripts)"
