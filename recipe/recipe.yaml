@@ -14,7 +14,9 @@ source:
 
 build:
   number: 2
-  skip: python_impl == 'pypy'
+  skip:
+    - python_impl == 'pypy'
+    - target_platform == 'linux-ppc64le' and match(python, '>=3.15')
   script: ${{ PYTHON }} -m pip install . -vv
 
 requirements:
